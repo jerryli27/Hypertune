@@ -93,8 +93,6 @@ def main(file_name, params_and_constraints, init_points, n_iter, output_file_nam
   # like to override that to define new flags.
   FLAGS.__dict__['__parsed'] = False
   controller_module.define_flags()
-  # Override the `show_plot` flag to false.
-  FLAGS.show_plot = False
 
   param_bound_dict = _to_param_bound_dict(ast.literal_eval(params_and_constraints))
   if constant_flags_str:
